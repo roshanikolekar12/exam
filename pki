@@ -7,6 +7,7 @@
   SSLCACertificateFile /home/roshnai/Documents/rootCA.crt
 </VirtualHost>
 
+
 $TTL 604800
 
 @       IN      SOA     localhost. root.roshani.in. (
@@ -20,3 +21,10 @@ $TTL 604800
 @       IN      A       192.168.216.133
 @       IN      AAAA    ::1
 ns      IN      A       192.168.216.133
+
+sudo systemctl stop apache2
+sudo systemctl disable apache2
+sudo apt remove --purge apache2 apache2-utils apache2-bin apache2-data -y
+sudo rm -rf /etc/apache2
+sudo apt autoremove -y
+apache2 -v
