@@ -1,0 +1,22 @@
+<VirtualHost *:443>
+	ServerName www.ditiss.com
+	DocumentRoot /var/www/html
+	SSLEngine on
+  SSLCertificateFile /home/roshnai/Documents/roshani.in.pfx
+  SSLCertificateKeyFile /home/roshnai/Documents/roshani.pem
+  SSLCACertificateFile /home/roshnai/Documents/rootCA.crt
+</VirtualHost>
+
+$TTL 604800
+
+@       IN      SOA     localhost. root.roshani.in. (
+                        2026061501
+                        604800
+                        86400
+                        2419200
+                        604800 )
+
+@       IN      NS      ns.roshani.in.
+@       IN      A       192.168.216.133
+@       IN      AAAA    ::1
+ns      IN      A       192.168.216.133
